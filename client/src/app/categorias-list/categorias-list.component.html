@@ -1,0 +1,20 @@
+
+<div class="col-md-md-6" *ngFor="let categoria of categorias">
+
+  <div class="card text-center">
+    <div class="card-header bg-dark d-flex justify-content-between aling-items-center">
+      {{categoria.COD_SUB_CATEGORIA}}
+      {{categoria.COD_CATEGORIA}}
+      {{categoria.NOMBRE}}
+      <button class="btn btn-danger" (click)="deleteGame(game.COD_VIDEOJUEGO)">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </div>
+    <div class="card-body">
+      <p>{{categoria.DESCRIPCION}}</p>
+      <p>{{categoria.FECHA_CREACION}}</p>
+      <a [routerLink]="['/games/edit', game.id]" class="btn btn-info btn-block">EDITAR</a>
+    </div>
+  </div>
+
+</div>
